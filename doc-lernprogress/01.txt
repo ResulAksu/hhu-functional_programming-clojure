@@ -1,0 +1,15 @@
+() Joy of Clojure Chapter 1
+(x) 00_syntax 
+(x) 4Clojure 1-3, 162
+
+Learned: 
+
+-Basic Syntax from 00_syntax
+
+-4Clojure   
+    - def creates variable -> does not matter if direct var or function
+    - (operation args args2) example: (+ 1 2) => 3
+    - Java String Methods on Clojure possible (.toUpperCase "helloWorld") => "HELLOWORLD"
+
+-Clojure Philosophy
+    -

@@ -1,0 +1,634 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd x:\hhu-functional_programming-clojure\fp\repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:50166 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉repl.00-syntax꞉> 
+3
+clj꞉repl.00-syntax꞉> 
+3
+clj꞉repl.00-syntax꞉> 
+java.lang.Long
+clj꞉repl.00-syntax꞉> 
+12345678901234567890N
+clj꞉repl.00-syntax꞉> 
+clojure.lang.BigInt
+clj꞉repl.00-syntax꞉> 
+3N
+clj꞉repl.00-syntax꞉> 
+10
+clj꞉repl.00-syntax꞉> 
+11
+clj꞉repl.00-syntax꞉> 
+3.141529
+clj꞉repl.00-syntax꞉> 
+java.math.BigDecimal
+clj꞉repl.00-syntax꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: kaboom! in this context, compiling:(x:\hhu-functional_programming-clojure\fp\repl\src\repl\00_syntax.clj:1:7687) 
+clj꞉repl.00-syntax꞉> 
+"kaboom!"
+clj꞉repl.00-syntax꞉> 
+(1 2 3)
+clj꞉repl.00-syntax꞉> 
+(1 2 (+ 1 2))
+clj꞉repl.00-syntax꞉> 
+{:key :value, 1 2, true [1], (1) false}
+clj꞉repl.00-syntax꞉> 
+:x
+clj꞉repl.00-syntax꞉> 
+2
+clj꞉repl.00-syntax꞉> 
+(1 2 3 4)
+clj꞉repl.00-syntax꞉> 
+#'repl.00-syntax/my-seq
+clj꞉repl.00-syntax꞉> 
+(0 1 1 2 3 5 8 13 21 34)
+clj꞉repl.00-syntax꞉> 
+nil
+clj꞉problems.elementary.001꞉> 
+"Nothing but the Truth"
+clj꞉problems.elementary.001꞉> 
+nil
+clj꞉problems.elementary.001꞉> 
+#'problems.elementary.001/solution
+clj꞉problems.elementary.001꞉> 
+nil
+clj꞉problems.elementary.001꞉> 
+#'problems.elementary.002/solution
+clj꞉problems.elementary.002꞉> 
+nil
+clj꞉problems.elementary.002꞉> 
+#'problems.elementary.002/solution
+clj꞉problems.elementary.002꞉> 
+; AssertionError Assert failed: (and (= (- 10 (* 2 3)) solution))  problems.elementary.002/eval7572 (form-init17760421094763589177.clj:9)
+clj꞉problems.elementary.002꞉> 
+#'problems.elementary.002/solution
+clj꞉problems.elementary.002꞉> 
+nil
+clj꞉problems.elementary.002꞉> 
+#'problems.elementary.003/solution
+clj꞉problems.elementary.003꞉> 
+nil
+clj꞉problems.elementary.003꞉> 
+#'problems.elementary.162/solution
+clj꞉problems.elementary.162꞉> 
+; AssertionError Assert failed: (and (= solution (if-not false 1 0)) (= solution (if-not nil 1 0)) (= solution (if true 1 0)) (= solution (if [] 1 0)) (= solution (if [0] 1 0)) (= solution (if 0 1 0)) (= solution (if 1 1 0)))  problems.elementary.162/eval7638 (form-init17760421094763589177.clj:13)
+clj꞉problems.elementary.162꞉> 
+#'problems.elementary.162/solution
+clj꞉problems.elementary.162꞉> 
+; AssertionError Assert failed: (and (= solution (if-not false 1 0)) (= solution (if-not nil 1 0)) (= solution (if true 1 0)) (= solution (if [] 1 0)) (= solution (if [0] 1 0)) (= solution (if 0 1 0)) (= solution (if 1 1 0)))  problems.elementary.162/eval7646 (form-init17760421094763589177.clj:13)
+clj꞉problems.elementary.162꞉> 
+#'problems.elementary.162/solution
+clj꞉problems.elementary.162꞉> 
+nil
+clj꞉problems.elementary.162꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd x:\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:50551 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Can't take value of a macro: #'clojure.core/comment, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:1:7687) 
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: doc in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:20:3) 
+clj꞉repl.01-intro꞉> 
+"foof"
+clj꞉repl.01-intro꞉> 
+"hello world"
+clj꞉repl.01-intro꞉> 
+"n"
+clj꞉repl.01-intro꞉> 
+"\n"
+clj꞉repl.01-intro꞉> 
+5
+clj꞉repl.01-intro꞉> 
+; ArithmeticException integer overflow  clojure.lang.Numbers.throwIntOverflow (Numbers.java:1501)
+clj꞉repl.01-intro꞉> 
+(1 :two 3)
+clj꞉repl.01-intro꞉> 
+(1 2 3)
+clj꞉repl.01-intro꞉> 
+[1 2 3 4]
+clj꞉repl.01-intro꞉> 
+[1 2 3 4]
+clj꞉repl.01-intro꞉> 
+clojure.lang.PersistentVector
+clj꞉repl.01-intro꞉> 
+3
+clj꞉repl.01-intro꞉> 
+[1 2 3 1]
+clj꞉repl.01-intro꞉> 
+(1 1 2 3)
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: y in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:1:7687) 
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: n in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:222:3) 
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: n in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:223:4) 
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/n
+clj꞉repl.01-intro꞉> 
+{:name "Witulski", :first-name "John", :age :bivi}
+clj꞉repl.01-intro꞉> 
+"Witulski"
+clj꞉repl.01-intro꞉> 
+"Witulski"
+clj꞉repl.01-intro꞉> 
+{:name "Witulski", :first-name "John", :age :bivi}
+clj꞉repl.01-intro꞉> 
+"Witulski"
+clj꞉repl.01-intro꞉> 
+"Bendisposto"
+clj꞉repl.01-intro꞉> 
+28
+clj꞉repl.01-intro꞉> 
+135
+clj꞉repl.01-intro꞉> 
+1
+clj꞉repl.01-intro꞉> 
+0
+clj꞉repl.01-intro꞉> 
+; ClassCastException Cannot cast clojure.lang.PersistentVector to java.lang.Number  java.lang.Class.cast (Class.java:3946)
+clj꞉repl.01-intro꞉> 
+24
+clj꞉repl.01-intro꞉> 
+; ClassCastException class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.add (Numbers.java:128)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/fancy-calculation
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/my-terrible-idea
+clj꞉repl.01-intro꞉> 
+42
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: whargbl in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:1:7687) 
+clj꞉repl.01-intro꞉> 
+126
+clj꞉repl.01-intro꞉> 
+:location1 4
+:location2 0
+nil
+clj꞉repl.01-intro꞉> 
+3
+clj꞉repl.01-intro꞉> 
+(0 1 2 3 4 5 6 7 8 9)
+clj꞉repl.01-intro꞉> 
+nil
+clj꞉problems.elementary.004꞉> 
+#'problems.elementary.004/solution
+clj꞉problems.elementary.004꞉> 
+; AssertionError Assert failed: (and (= solution (quote (:a :b :c))))  problems.elementary.004/eval7562 (form-init14704343567219855289.clj:12)
+clj꞉problems.elementary.004꞉> 
+#'problems.elementary.004/solution
+clj꞉problems.elementary.004꞉> 
+nil
+clj꞉problems.elementary.004꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: a in this context, compiling:(x:\hhu-functional_programming-clojure\impl-4clj\src\problems\elementary\004.clj:10:15) 
+clj꞉problems.elementary.004꞉> 
+#'problems.elementary.005/solution
+clj꞉problems.elementary.005꞉> 
+#'problems.elementary.005/solution
+clj꞉problems.elementary.005꞉> 
+nil
+clj꞉problems.elementary.005꞉> 
+#'problems.elementary.006/solution
+clj꞉problems.elementary.006꞉> 
+nil
+clj꞉problems.elementary.006꞉> 
+#'problems.elementary.007/solution
+clj꞉problems.elementary.007꞉> 
+nil
+clj꞉problems.elementary.007꞉> 
+#'problems.elementary.008/solution
+clj꞉problems.elementary.008꞉> 
+nil
+clj꞉problems.elementary.008꞉> 
+#'problems.elementary.009/solution
+clj꞉problems.elementary.009꞉> 
+; AssertionError Assert failed: (and (= #{1 4 3 2} (conj #{1 4 3} solution)))  problems.elementary.009/eval7727 (form-init14704343567219855289.clj:12)
+clj꞉problems.elementary.009꞉> 
+#'problems.elementary.009/solution
+clj꞉problems.elementary.009꞉> 
+nil
+clj꞉problems.elementary.009꞉> 
+#'problems.elementary.010/solution
+clj꞉problems.elementary.010꞉> 
+nil
+clj꞉problems.elementary.010꞉> 
+#'problems.elementary.011/solution
+clj꞉problems.elementary.011꞉> 
+nil
+clj꞉problems.elementary.011꞉> 
+#'problems.elementary.012/solution
+clj꞉problems.elementary.012꞉> 
+nil
+clj꞉problems.elementary.012꞉> 
+#'problems.elementary.013/solution
+clj꞉problems.elementary.013꞉> 
+nil
+clj꞉problems.elementary.013꞉> 
+#'problems.elementary.015/solution
+clj꞉problems.elementary.015꞉> 
+; ClassCastException class clojure.lang.ArraySeq cannot be cast to class java.lang.Number (clojure.lang.ArraySeq is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.multiply (Numbers.java:148)
+clj꞉problems.elementary.015꞉> 
+#'problems.elementary.015/solution
+clj꞉problems.elementary.015꞉> 
+; AssertionError Assert failed: (and (= (solution 2) 4) (= (solution 3) 6) (= (solution 11) 22) (= (solution 7) 14))  problems.elementary.015/eval7899 (form-init14704343567219855289.clj:13)
+clj꞉problems.elementary.015꞉> 
+#'problems.elementary.015/solution
+clj꞉problems.elementary.015꞉> 
+nil
+clj꞉problems.elementary.015꞉> 
+#'problems.elementary.015/solution
+clj꞉problems.elementary.015꞉> 
+nil
+clj꞉problems.elementary.015꞉> 
+#'problems.elementary.016/solution
+clj꞉problems.elementary.016꞉> 
+; IllegalArgumentException No matching method found: join for class java.lang.String  clojure.lang.Reflector.invokeMatchingMethod (Reflector.java:53)
+clj꞉problems.elementary.016꞉> 
+#'problems.elementary.016/solution
+clj꞉problems.elementary.016꞉> 
+; ClassCastException class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  problems.elementary.016/solution (form-init14704343567219855289.clj:10)
+clj꞉problems.elementary.016꞉> 
+#'problems.elementary.016/solution
+clj꞉problems.elementary.016꞉> 
+; ClassCastException class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')  clojure.lang.Numbers.add (Numbers.java:128)
+clj꞉problems.elementary.016꞉> 
+#'problems.elementary.016/solution
+clj꞉problems.elementary.016꞉> 
+; IllegalArgumentException No matching method found: concat for class java.lang.String  clojure.lang.Reflector.invokeMatchingMethod (Reflector.java:53)
+clj꞉problems.elementary.016꞉> 
+#'problems.elementary.016/solution
+clj꞉problems.elementary.016꞉> 
+nil
+clj꞉problems.elementary.016꞉> 
+#'problems.elementary.035/solution
+clj꞉problems.elementary.035꞉> 
+nil
+clj꞉problems.elementary.035꞉> 
+#'problems.elementary.037/solution
+clj꞉problems.elementary.037꞉> 
+; AssertionError Assert failed: (and (= solution (apply str (re-seq #"[A-Z]+" "bA1B3Ce "))))  problems.elementary.037/eval8035 (form-init14704343567219855289.clj:9)
+clj꞉problems.elementary.037꞉> 
+#'problems.elementary.037/solution
+clj꞉problems.elementary.037꞉> 
+; AssertionError Assert failed: (and (= solution (apply str (re-seq #"[A-Z]+" "bA1B3Ce "))))  problems.elementary.037/eval8037 (form-init14704343567219855289.clj:9)
+clj꞉problems.elementary.037꞉> 
+"ABC"
+clj꞉problems.elementary.037꞉> 
+#'problems.elementary.037/solution
+clj꞉problems.elementary.037꞉> 
+; AssertionError Assert failed: (and (= solution (apply str (re-seq #"[A-Z]+" "bA1B3Ce "))))  problems.elementary.037/eval8041 (form-init14704343567219855289.clj:9)
+clj꞉problems.elementary.037꞉> 
+#'problems.elementary.037/solution
+clj꞉problems.elementary.037꞉> 
+nil
+clj꞉problems.elementary.037꞉> 
+(5 4 3 2 1)
+clj꞉problems.elementary.057꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: x in this context, compiling:(x:\hhu-functional_programming-clojure\impl-4clj\src\problems\elementary\134.clj:12:7) 
+clj꞉problems.elementary.134꞉> 
+#'problems.elementary.134/solution
+clj꞉problems.elementary.134꞉> 
+; IllegalArgumentException contains? not supported on type: clojure.lang.Keyword  clojure.lang.RT.contains (RT.java:814)
+clj꞉problems.elementary.134꞉> 
+#'problems.elementary.134/solution
+clj꞉problems.elementary.134꞉> 
+nil
+clj꞉problems.elementary.134꞉> 
+(1 5 9 13 17 21 25 29 33 37)
+clj꞉problems.elementary.145꞉> 
+(1 5 9 13 17 21 25 29 33 37)
+clj꞉problems.elementary.145꞉> 
+#'problems.elementary.145/solution
+clj꞉problems.elementary.145꞉> 
+nil
+clj꞉problems.elementary.145꞉> 
+#'problems.elementary.156/solution
+clj꞉problems.elementary.156꞉> 
+nil
+clj꞉problems.elementary.156꞉> 
+#'problems.elementary.161/solution
+clj꞉problems.elementary.161꞉> 
+; AssertionError Assert failed: (and (clojure.set/superset? solution #{2}) (clojure.set/subset? #{1} solution) (clojure.set/superset? solution #{1 2}) (clojure.set/subset? #{1 2} solution))  problems.elementary.161/eval8298 (form-init14704343567219855289.clj:13)
+clj꞉problems.elementary.161꞉> 
+#'problems.elementary.161/solution
+clj꞉problems.elementary.161꞉> 
+; AssertionError Assert failed: (and (clojure.set/superset? solution #{2}) (clojure.set/subset? #{1} solution) (clojure.set/superset? solution #{1 2}) (clojure.set/subset? #{1 2} solution))  problems.elementary.161/eval8303 (form-init14704343567219855289.clj:13)
+clj꞉problems.elementary.161꞉> 
+#'problems.elementary.161/solution
+clj꞉problems.elementary.161꞉> 
+nil
+clj꞉problems.elementary.161꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd x:\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:50117 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉>  ; Use `alt+enter` to evaluate
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'repl.01-intro/seq-a
+clj꞉repl.01-intro꞉> 
+(99
+ 98
+ 97
+ 96
+ 95
+ 94
+ 93
+ 92
+ 91
+ 90
+ 89
+ 88
+ 87
+ 86
+ 85
+ 84
+ 83
+ 82
+ 81
+ 80
+ 79
+ 78
+ 77
+ 76
+ 75
+ 74
+ 73
+ 72
+ 71
+ 70
+ 69
+ 68
+ 67
+ 66
+ 65
+ 64
+ 63
+ 62
+ 61
+ 60
+ 59
+ 58
+ 57
+ 56
+ 55
+ 54
+ 53
+ 52
+ 51
+ 50
+ ...)
+clj꞉repl.01-intro꞉> 
+; ClassCastException class clojure.lang.ArraySeq cannot be cast to class clojure.lang.IFn (clojure.lang.ArraySeq and clojure.lang.IFn are in unnamed module of loader 'app')  repl.01-intro/eval7484 (form-init7025750932820872276.clj:757)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-a
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-a
+clj꞉repl.01-intro꞉> 
+(99
+ 98
+ 97
+ 96
+ 95
+ 94
+ 93
+ 92
+ 91
+ 90
+ 89
+ 88
+ 87
+ 86
+ 85
+ 84
+ 83
+ 82
+ 81
+ 80
+ 79
+ 78
+ 77
+ 76
+ 75
+ 74
+ 73
+ 72
+ 71
+ 70
+ 69
+ 68
+ 67
+ 66
+ 65
+ 64
+ 63
+ 62
+ 61
+ 60
+ 59
+ 58
+ 57
+ 56
+ 55
+ 54
+ 53
+ 52
+ 51
+ 50
+ ...)
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: x in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:757:24) 
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-a
+clj꞉repl.01-intro꞉> 
+#object[clojure.lang.Var$Unbound 0x18e46404 "Unbound: #'repl.01-intro/seq-b"]
+clj꞉repl.01-intro꞉> 
+#object[clojure.lang.Var$Unbound 0x18e46404 "Unbound: #'repl.01-intro/seq-b"]
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-b
+clj꞉repl.01-intro꞉> 
+(1
+ 4
+ 9
+ 16
+ 25
+ 36
+ 49
+ 64
+ 81
+ 100
+ 121
+ 144
+ 169
+ 196
+ 225
+ 256
+ 289
+ 324
+ 361
+ 400
+ 441
+ 484
+ 529
+ 576
+ 625
+ 676
+ 729
+ 784
+ 841
+ 900
+ 961
+ 1024
+ 1089
+ 1156
+ 1225
+ 1296
+ 1369
+ 1444
+ 1521
+ 1600
+ 1681
+ 1764
+ 1849
+ 1936
+ 2025
+ 2116
+ 2209
+ 2304
+ 2401
+ 2500
+ ...)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-b
+clj꞉repl.01-intro꞉> 
+(1 4 9 16 25)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-b
+clj꞉repl.01-intro꞉> 
+(1 4 9 16 25)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-b
+clj꞉repl.01-intro꞉> 
+(1 4 9 16 25 36 49 64 81 100 121 144 169 196 225 256 289 324 361 400 441 484 529 576 625 676 729 784 841 900 961)
+clj꞉repl.01-intro꞉> 
+#function[clojure.core/take-while/fn--4832]
+clj꞉repl.01-intro꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: seq-d in this context, compiling:(x:\hhu-functional_programming-clojure\impl-repl\src\repl\01_intro.clj:1:7686) 
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-d
+clj꞉repl.01-intro꞉> 
+([1 2]
+ [2 5]
+ [3 10]
+ [4 17]
+ [5 26]
+ [6 37]
+ [7 50]
+ [8 65]
+ [9 82]
+ [10 101]
+ [11 122]
+ [12 145]
+ [13 170]
+ [14 197]
+ [15 226]
+ [16 257]
+ [17 290]
+ [18 325]
+ [19 362]
+ [20 401]
+ [21 442]
+ [22 485]
+ [23 530]
+ [24 577]
+ [25 626]
+ [26 677]
+ [27 730]
+ [28 785]
+ [29 842]
+ [30 901]
+ [31 962]
+ [32 1025]
+ [33 1090]
+ [34 1157]
+ [35 1226]
+ [36 1297]
+ [37 1370]
+ [38 1445]
+ [39 1522]
+ [40 1601]
+ [41 1682]
+ [42 1765]
+ [43 1850]
+ [44 1937]
+ [45 2026]
+ [46 2117]
+ [47 2210]
+ [48 2305]
+ [49 2402]
+ [50 2501]
+ ...)
+clj꞉repl.01-intro꞉> 
+#'repl.01-intro/seq-d
+clj꞉repl.01-intro꞉> 
+; ClassCastException class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')  repl.01-intro/fn--7540 (form-init7025750932820872276.clj:765)
+clj꞉repl.01-intro꞉> 

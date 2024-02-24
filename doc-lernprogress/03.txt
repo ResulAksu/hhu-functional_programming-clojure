@@ -1,0 +1,8 @@
+() 23_hof
+() 4Clojure 17-18, 64, 19–25, 27, 29–33, 38, 42, 45, 46, 59
+() Video: Higher-Order Functions
+
+Learned:
+
+Video:
+    

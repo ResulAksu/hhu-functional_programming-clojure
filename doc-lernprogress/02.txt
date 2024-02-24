@@ -1,0 +1,52 @@
+() Clojure for Brave and True chapter 3
+(x) 01_intro
+(x) 4Clojure 4–13, 15–16, 35, 37, 57, 134, 145, 156, 161
+(x) Exercise 2.2 "sequences"
+(x) Videos: Lambda, Clojure-Syntax & Auswertungsregeln, Coding Guidelines
+
+Learned:
+
+-Videos
+    - Lambda: Beta-Reduktion bsp.: lambdax(lambday.(x*y))42 2  -(Beta-Reduktion)-> lambday.(42*y)2 -(Beta-Reduktion)-> (42*2) -(Beta-Reduktion)-> 84
+        - Lambda wird ersetzt in Clojure bsp.: ((fn [x] (fn [y] (* x y))) 42)
+    - Clojure-Syntax & Auswertungsregeln: Listen sind Aufrufe - Lisp (Listoperations)
+        - Auswertungsregel: Applicative order: links nach rechts, außen nach innen 
+        - Special forms:
+            (def pi 3) Definition
+            (fn [x] (* x x )) Lambda
+            (defn foo [x] :bar) Funktionsdefinition
+            (let [x pi] (inc x)) lokale Bindings
+            (if true then else?) Conditions
+            (do (println pi) 42) Blöcke
+            (quote (+ 1 2)) Verhindert Auswertung
+
+-4Clojure
+    - ":" keys
+    - (defn solution [args] (str "Hello, " args "!"))
+    - (apply str (re-seq #"[A-Z]+" "bA1B3Ce ")) => ABC
+    - (defn solution
+        [key map]
+        (and (contains? map key) (nil? (get map key))))
+    - (for [[x y] (partition 2 (range 20))] (+ x y)) => '(1 5 9 13 17 21 25 29 33 37)
+        - partition sagt teilen, 2 sagt Schritte, range sagt bis wohin
+            - 0+1, 2+3, 4+5 ...
+    - (defn solution
+        [default_value keys]
+        (zipmap keys (repeat (count keys) default_value))) => (solution "x" [1 2 3]) {1 "x", 2 "x", 3 "x"}
+
+-Exercise:
+
+; 100 to -100 in descending order
+(def seq-a (sort (comp - compare)(range -100 101)) )
+
+; for (int i = 1; i*i <= 1000; i++){ seq.add(i*i)}
+
+(def seq-b (map #(* % %) 
+                (take-while (fn [i] (<= (* i i) 1000)) 
+                            (iterate inc 1))))
+; 0 and 1000, which are not evenly divisible by 3
+(def seq-c (filter #(= 0 (mod % 3)) (range 1 1001)))
+
+; 0 < n < 1000 ∧n2< m ∧m is minimal
+(def seq-d (map #(vector % (+ (* % %) 1)) (range 1 1000)))
+(def seq-d2 (map (fn [n] [n (+ (* n n) 1)]) (range 1 1000)))

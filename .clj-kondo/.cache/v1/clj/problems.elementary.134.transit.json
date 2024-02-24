@@ -1,0 +1,1 @@
+["^ ","~$solution",["^ ","~:row",10,"~:col",1,"~:fixed-arities",["~#set",[2]],"~:name","^0","~:ns","~$problems.elementary.134","~:top-ns","^7","~:arities",["^ ","~i2",["^ ","~:ret",["^4",["~:nil","~:boolean"]],"~:arglist-str","[key map]"]],"~:type","~:fn"],"~:filename","X:\\hhu-functional_programming-clojure\\impl-4clj\\src\\problems\\elementary\\134.clj"]
