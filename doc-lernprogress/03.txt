@@ -1,8 +1,21 @@
-() 23_hof
-() 4Clojure 17-18, 64, 19–25, 27, 29–33, 38, 42, 45, 46, 59
-() Video: Higher-Order Functions
+(x) 23_hof
+(x) 4Clojure 17-18, 64, 19–25, 27, 29–33, 38, 42, 45, 46, 59
+(x) Video: Higher-Order Functions
 
 Learned:
 
-Video:
-    
+-Video:
+    - HOF: Ist eine Funktion, welche eine Funktion zurückgibt. 
+        -Bsp.: map, filter, take-while, reduce, apply, comp, partial
+
+-4Clojure:
+    - last: (defn solution [args] (last args))
+    - vorletzte: (defn solution [args] (nth args (- (count args) 2)))
+    - summe: (defn solution [args] (reduce + args))
+    - ungerade: (defn solution [args] (filter odd? args))
+    - only-capital: (defn solution [args] (apply str (re-seq #"[A-Z]+" args)))
+    - duplizieren : (defn solution [args] (mapcat #(repeat 2 %) args))
+    - max: (defn solution [& args] (apply max args))
+    - flip-arg: (defn solution [args] (fn [a b] (args b a)))
+    - (defn solution [& functs] (fn [& args] (map #(apply % args) functs)))
+     => (assert (and (= [21 6 1] ((solution + max min) 2 3 5 1 6 4))))

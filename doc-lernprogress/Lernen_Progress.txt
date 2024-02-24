@@ -3,8 +3,8 @@ Plan: Durch Reading Guides arbeiten Stück für Stück
 	-> Aufgaben implementieren
 
 1: [x]
-2: []
-3: []
+2: [x]
+3: [x]
 4: []
 5: []
 6: []

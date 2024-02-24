@@ -9,8 +9,7 @@ containing the result of applying each function
 left-to-right to the argument list.")
 
 
-(defn solution
-  [& args])
+(defn solution [& functs] (fn [& args] (map #(apply % args) functs)))
 
 
 (assert (and (= [21 6 1] ((solution + max min) 2 3 5 1 6 4))

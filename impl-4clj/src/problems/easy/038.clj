@@ -8,7 +8,7 @@ of parameters and returns the maximum value.")
 
 
 (defn solution
-  [& args])
+  [& args] (apply max args))
 
 
 (assert (and (= (solution 1 8 3 4) 8)

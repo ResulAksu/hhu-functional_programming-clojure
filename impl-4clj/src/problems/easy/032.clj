@@ -7,8 +7,9 @@
 duplicates each element of a sequence.")
 
 
-(defn solution
-  [& args])
+(defn solution [args]
+  (mapcat #(repeat 2 %) args))
+
 
 
 (assert (and (= (solution [1 2 3]) (quote (1 1 2 2 3 3)))

@@ -6,7 +6,7 @@
 
 
 (defn solution
-  [& args])
+  [args] (reverse args))
 
 
 (assert (and (= (solution [1 2 3 4 5]) [5 4 3 2 1])

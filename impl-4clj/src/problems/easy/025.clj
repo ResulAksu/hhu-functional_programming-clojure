@@ -8,7 +8,7 @@ only the odd numbers from a sequence.")
 
 
 (defn solution
-  [& args])
+  [args] (filter odd? args))
 
 
 (assert (and (= (solution #{1 4 3 2 5}) (quote (1 3 5)))

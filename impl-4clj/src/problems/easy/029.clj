@@ -8,7 +8,7 @@ and returns a new string containing only the capital letters.")
 
 
 (defn solution
-  [& args])
+  [args] (apply str (re-seq #"[A-Z]+" args)))
 
 
 (assert (and (= (solution "HeLlO, WoRlD!") "HLOWRD")
