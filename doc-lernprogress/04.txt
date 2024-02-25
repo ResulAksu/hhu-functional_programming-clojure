@@ -1,0 +1,21 @@
+(x) 02_data.clj
+(x) Videos: Datenstrukturen, Laziness, ISeq vs Seqable
+(x) Videos: Clojure für Java 24-29min
+() Exercise 4
+
+-Videos:
+    -Datenstrukturen: Listen sind singly linked Listen; Maps Vektoren Sets: Hash Array-;apped Trie mit Path Copying 
+                      Immutability -> Structural Sharing -> effiziente Immutability
+    -Laziness: in Clojure explizite Laziness: man muss explizit aufrufen in LazySeqs
+    -ISEQ vs Sequable: Listen sind ISEQ -> immutable, Seqable -> kann ein ISEQ später werden (Listen,Vektoren,Sets,Maps)
+    -"Clojure für Java": Persistente Datenstrukture (Immutable, es werden neue erstellt "Structural Sharing" durch Path Copying weil alle Datenstrukturen unter der Haube Bäume sind Nodes und Zeiger)
+
+-02_data.clj:
+    -apply:
+    does not work: Type error (List instead of Integer)
+    (+ 4 [1 2 3])
+    apply unpacks the collection
+    (apply + 4 [1 2 3])
+    -general_idea:
+    A lazy data structure keeps a pointer to the rest of the sequence and knows
+    which functions have to be applied to those elements   

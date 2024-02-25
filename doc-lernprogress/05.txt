@@ -1,0 +1,3 @@
+() 05_,04_,07_,08_,09_.clj
+() Videos: Destructing, Recursion
+() 4Clojure: 3 Random noch nicht gemachte Medium
