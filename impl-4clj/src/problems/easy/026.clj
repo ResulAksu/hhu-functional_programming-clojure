@@ -7,8 +7,12 @@
 the first X fibonacci numbers.")
 
 
-(defn solution
-  [& args])
+(defn solution [x]
+  (letfn [(fib-helper [a b x]
+            (if (zero? x) [] 
+              (cons a (fib-helper b (+ a b) (dec x)))))]
+    (fib-helper 1 1 x)))
+
 
 
 (assert (and (= (solution 3) (quote (1 1 2)))

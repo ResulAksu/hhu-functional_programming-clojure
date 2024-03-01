@@ -7,8 +7,15 @@
 consecutive duplicates from a sequence.")
 
 
-(defn solution
-  [& args])
+(defn solution [args]
+  (reduce (fn [acc item]
+            (if (and (not-empty acc) (= (last acc) item))
+              acc
+              (conj acc item)))
+          [] 
+          args))
+
+
 
 
 (assert (and (= (apply str (solution "Leeeeeerrroyyy")) "Leroy")

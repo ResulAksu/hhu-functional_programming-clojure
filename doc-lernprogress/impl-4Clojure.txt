@@ -1,4 +1,26 @@
 (x) 4Clojure 1-3, 162
 (x) 4Clojure 4–13, 15–16, 35, 37, 57, 134, 145, 156, 161
 (x) 4Clojure 17-18, 64, 19–25, 27, 29–33, 38, 42, 45, 46, 59
-(x) 4Clojure 43
+(x) 4Clojure (M)43
+(x) 4Clojure (EASY)26,28,30,31
+
+26.clj-fibonacci:
+- (defn solution [x]  (letfn [(fib-helper [a b x] (if (zero? x) []  (cons a (fib-helper b (+ a b) (dec x)))))] (fib-helper 1 1 x)))
+28.clj-flatten:
+- (defn solution [args] (flatten args))
+30.clj-consecutive-duplicate:
+- (defn solution [args]
+  (reduce (fn [acc item]
+            (if (and (not-empty acc) (= (last acc) item))
+              acc
+              (conj acc item)))
+          []  %% starts acc with empty 
+          args %% in fn call args => item))
+31.clj-consecutive-duplicate-sublist:
+- (defn solution [args] 
+    (reduce (fn [acc item]
+              (if (and (not-empty acc) (= (last (last acc)) item))
+                (update-in acc [(dec (count acc))] conj item)
+                (conj acc [item])))
+            []
+            args))
