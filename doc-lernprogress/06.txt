@@ -1,0 +1,13 @@
+(x) Rich Hickey: Simple Made Easy, Simplicity Matters
+(x) Ben Moseley: Out of the Tar Pit
+() Exercise 6, außer path? -> machen !!
+
+-Rich Hickey:
+    - Complex: state, objects, methods, vars, inheritance, switch, 
+        matching, syntax, imperative loops, actors, ORM, 
+        conditionals, inconsistency. 
+      Simpler: values, functions, namespaces, managed refs, 
+        polymorphism, data, set functions, queues, 
+        declarative data manipulation, rules, consistency.
+    - Hauptgedanke: Dadurch, dass man nicht mehr mit Raw-Data arbeitet
+        verkomplext man das Geschehen. (OOP Enitäten)
