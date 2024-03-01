@@ -2,7 +2,7 @@
 (x) 4Clojure 4–13, 15–16, 35, 37, 57, 134, 145, 156, 161
 (x) 4Clojure 17-18, 64, 19–25, 27, 29–33, 38, 42, 45, 46, 59
 (x) 4Clojure (M)43
-(x) 4Clojure (EASY)26,28,30,31
+(x) 4Clojure (EASY)26,28,30,31,33,34,39
 
 26.clj-fibonacci:
 - (defn solution [x]  (letfn [(fib-helper [a b x] (if (zero? x) []  (cons a (fib-helper b (+ a b) (dec x)))))] (fib-helper 1 1 x)))
@@ -24,3 +24,19 @@
                 (conj acc [item])))
             []
             args))
+33.clj-replicate-each-element
+- (defn solution
+    [args n] (mapcat #(repeat n %) args))
+34.clj-range
+- (defn solution
+   [start end] (range start end))
+39.clj-Interleave
+- (defn solution
+  [seq1 seq2]
+  (interleave seq1 seq2))
+   => (solution [1 2 3] [:a :b :c]) => (1 :a 2 :b 3 :c)
+40.clj-Interleave
+- (defn solution
+  [value se] (butlast  (interleave se (repeat value))))
+  => (solution 0 [1 2 3]) => (1 0 2 0 3)
+41. MACHEN !

@@ -8,7 +8,7 @@ of all integers in a given range.")
 
 
 (defn solution
-  [& args])
+  [start end] (range start end))
 
 
 (assert (and (= (solution 1 4) (quote (1 2 3)))
