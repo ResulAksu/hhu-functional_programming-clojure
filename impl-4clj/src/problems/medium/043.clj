@@ -6,9 +6,9 @@
 (comment "Write a function which reverses the
 interleave process into x number of subsequences.")
 
-
-(defn solution
-  [& args])
+(comment "Idee ist an alle blocks stellen von nums zu trennen, das heißt wenn blocks = 2 ist, an allen zweiten Stellen ")
+(defn solution [nums blocks]
+  (apply map list (partition blocks nums)))
 
 
 (assert (and (= (solution [1 2 3 4 5 6] 2) (quote ((1 3 5) (2 4 6))))
