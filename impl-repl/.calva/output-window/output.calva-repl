@@ -10,7 +10,7 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
-; Using host:port 127.0.0.1:63108 ...
+; Using host:port 127.0.0.1:51001 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -27,114 +27,668 @@ clj꞉user꞉> 
 ; Jack-in done.
 clj꞉user꞉> 
 nil
-clj꞉problems.easy.033꞉> 
-#'problems.easy.033/solution
-clj꞉problems.easy.033꞉> 
-#'problems.easy.033/solution
-clj꞉problems.easy.033꞉> 
-; AssertionError Assert failed: (and (= (solution [1 2 3] 2) (quote (1 1 2 2 3 3))) (= (solution [:a :b] 4) (quote (:a :a :a :a :b :b :b :b))) (= (solution [4 5 6] 1) (quote (4 5 6))) (= (solution [[1 2] [3 4]] 2) (quote ([1 2] [1 2] [3 4] [3 4]))) (= (solution [44 33] 2) [44 44 33 33]))  problems.easy.033/eval7489 (form-init11150290295027048688.clj:14)
-clj꞉problems.easy.033꞉> 
-#'problems.easy.033/solution
-clj꞉problems.easy.033꞉> 
+clj꞉repl.17-homoiconicity꞉> 
+#'repl.17-homoiconicity/myfunction-please-provide-int
+clj꞉repl.17-homoiconicity꞉> 
+value ok: 4
 nil
-clj꞉problems.easy.033꞉> 
-(1 1 2 2 3 3)
-clj꞉problems.easy.033꞉> 
+clj꞉repl.17-homoiconicity꞉> 
+; AssertionError Assert failed: (integer? x)  repl.17-homoiconicity/myfunction-please-provide-int (form-init10818325770618001840.clj:4)
+clj꞉repl.17-homoiconicity꞉> 
+(+ 1 2 3)
+clj꞉repl.17-homoiconicity꞉> 
+6
+clj꞉repl.17-homoiconicity꞉> 
+6
 nil
-clj꞉problems.easy.034꞉> 
-#'problems.easy.034/solution
-clj꞉problems.easy.034꞉> 
+clj꞉repl.17-homoiconicity꞉> 
+6
+clj꞉repl.17-homoiconicity꞉> 
+[1 2 3]
+clj꞉repl.17-homoiconicity꞉> 
+[1 2 3]
+clj꞉repl.17-homoiconicity꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: a in this context, compiling:(c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl\src\repl\17_homoiconicity.clj:40:1) 
+clj꞉repl.17-homoiconicity꞉> 
+'[1 2 a]
+clj꞉repl.17-homoiconicity꞉> 
+[1 2 a]
+clj꞉repl.17-homoiconicity꞉> 
+java.lang.Long
+clj꞉repl.17-homoiconicity꞉> 
+(def foo (clojure.core/fn ([x] x)))
+clj꞉repl.17-homoiconicity꞉> 
+18
+clj꞉repl.17-homoiconicity꞉> 
+18
+clj꞉repl.17-homoiconicity꞉> 
+(* (inc (+ 3 5)) 2)
+clj꞉repl.17-homoiconicity꞉> 
+6
+clj꞉repl.17-homoiconicity꞉> 
+18
+clj꞉repl.17-homoiconicity꞉> 
+(let* [expr 3 expr (+ expr 5) expr (inc expr)] (* 2 expr))
+clj꞉repl.17-homoiconicity꞉> 
+(let*
+ [iter__5216__auto__
+  (clojure.core/fn
+   iter__5954
+   [s__5955]
+   (clojure.core/lazy-seq
+    (clojure.core/loop
+     [s__5955 s__5955]
+     (clojure.core/when-let
+      [s__5955 (clojure.core/seq s__5955)]
+      (if
+       (clojure.core/chunked-seq? s__5955)
+       (clojure.core/let
+        [c__5214__auto__
+         (clojure.core/chunk-first s__5955)
+         size__5215__auto__
+         (clojure.core/int (clojure.core/count c__5214__auto__))
+         b__5957
+         (clojure.core/chunk-buffer size__5215__auto__)]
+        (if
+         (clojure.core/loop
+          [i__5956 (clojure.core/int 0)]
+          (if
+           (clojure.core/< i__5956 size__5215__auto__)
+           (clojure.core/let
+            [x (.nth c__5214__auto__ i__5956)]
+            (do (clojure.core/chunk-append b__5957 x) (recur (clojure.core/unchecked-inc i__5956))))
+           true))
+         (clojure.core/chunk-cons (clojure.core/chunk b__5957) (iter__5954 (clojure.core/chunk-rest s__5955)))
+         (clojure.core/chunk-cons (clojure.core/chunk b__5957) nil)))
+       (clojure.core/let
+        [x (clojure.core/first s__5955)]
+        (clojure.core/cons x (iter__5954 (clojure.core/rest s__5955)))))))))]
+ (iter__5216__auto__ [1 2 3]))
+clj꞉repl.17-homoiconicity꞉> 
 nil
-clj꞉problems.easy.034꞉> 
-#'problems.easy.039/solution
-clj꞉problems.easy.039꞉> 
-; IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.invoke (APersistentVector.java:292)
-clj꞉problems.easy.039꞉> 
-; IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.invoke (APersistentVector.java:292)
-clj꞉problems.easy.039꞉> 
-; IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.invoke (APersistentVector.java:292)
-clj꞉problems.easy.039꞉> 
-#'problems.easy.039/solution
-clj꞉problems.easy.039꞉> 
-; IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.invoke (APersistentVector.java:292)
-clj꞉problems.easy.039꞉> 
-; IllegalArgumentException Key must be integer  clojure.lang.APersistentVector.invoke (APersistentVector.java:292)
-clj꞉problems.easy.039꞉> 
-#'problems.easy.039/solution
-clj꞉problems.easy.039꞉> 
+clj꞉repl.11-macros꞉> 
+#'repl.11-macros/if-not2
+clj꞉repl.11-macros꞉> 
+:else
+clj꞉repl.11-macros꞉> 
+:then
+clj꞉repl.11-macros꞉> 
+:then
+:else
 nil
-clj꞉problems.easy.039꞉> 
-(1 :a 2 :b 3 :c)
-clj꞉problems.easy.039꞉> 
-#'problems.easy.040/solution
-clj꞉problems.easy.040꞉> 
-; AssertionError Assert failed: (and (= (solution 0 [1 2 3]) [1 0 2 0 3]) (= (apply str (solution ", " ["one" "two" "three"])) "one, two, three") (= (solution :z [:a :b :c :d]) [:a :z :b :z :c :z :d]))  problems.easy.040/eval7657 (form-init11150290295027048688.clj:14)
-clj꞉problems.easy.040꞉> 
-(0 1 0 2 0 3)
-clj꞉problems.easy.040꞉> 
-#'problems.easy.040/solution
-clj꞉problems.easy.040꞉> 
-; AssertionError Assert failed: (and (= (solution 0 [1 2 3]) [1 0 2 0 3]) (= (apply str (solution ", " ["one" "two" "three"])) "one, two, three") (= (solution :z [:a :b :c :d]) [:a :z :b :z :c :z :d]))  problems.easy.040/eval7664 (form-init11150290295027048688.clj:14)
-clj꞉problems.easy.040꞉> 
-(1 0 2 0 3 0)
-clj꞉problems.easy.040꞉> 
-#'problems.easy.040/solution
-clj꞉problems.easy.040꞉> 
-; IllegalArgumentException Don't know how to create ISeq from: java.lang.Long  clojure.lang.RT.seqFrom (RT.java:542)
-clj꞉problems.easy.040꞉> 
-#'problems.easy.040/solution
-clj꞉problems.easy.040꞉> 
-(1 0 2 0 3)
-clj꞉problems.easy.040꞉> 
+clj꞉repl.11-macros꞉> 
+#'repl.11-macros/if-not2
+clj꞉repl.11-macros꞉> 
+:then
 nil
-clj꞉problems.easy.040꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; AssertionError Assert failed: (and (= (solution [1 2 3 4 5 6 7 8] 3) [1 2 4 5 7 8]) (= (solution [:a :b :c :d :e :f] 2) [:a :c :e]) (= (solution [1 2 3 4 5 6] 4) [1 2 3 5 6]))  problems.easy.041/eval7719 (form-init11150290295027048688.clj:14)
-clj꞉problems.easy.041꞉> 
-()
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-(1 2 3 4 5 6 7 8)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-(1 4 7)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; AssertionError Assert failed: (and (= (solution [1 2 3 4 5 6 7 8] 3) [1 2 4 5 7 8]) (= (solution [:a :b :c :d :e :f] 2) [:a :c :e]) (= (solution [1 2 3 4 5 6] 4) [1 2 3 5 6]))  problems.easy.041/eval7750 (form-init11150290295027048688.clj:14)
-clj꞉problems.easy.041꞉> 
-(1 2 3 4 5 6 7 8)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/drop-every-nth-accumulating
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; ClassCastException class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.dec (Numbers.java:120)
-clj꞉problems.easy.041꞉> 
-; ClassCastException class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')  clojure.lang.Numbers.dec (Numbers.java:120)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; AssertionError Assert failed: (and (= (solution [1 2 3 4 5 6 7 8] 3) [1 2 4 5 7 8]) (= (solution [:a :b :c :d :e :f] 2) [:a :c :e]) (= (solution [1 2 3 4 5 6] 4) [1 2 3 5 6]))  problems.easy.041/eval7771 (form-init11150290295027048688.clj:23)
-clj꞉problems.easy.041꞉> 
-(((1 2) 4 5 6 7))
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; IllegalArgumentException Don't know how to create ISeq from: java.lang.Long  clojure.lang.RT.seqFrom (RT.java:542)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-(1 2 4 5 7 8)
-clj꞉problems.easy.041꞉> 
+clj꞉repl.11-macros꞉> 
+:else
 nil
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
-; UnsupportedOperationException count not supported on this type: Long  clojure.lang.RT.countFrom (RT.java:646)
-clj꞉problems.easy.041꞉> 
-#'problems.easy.041/solution
-clj꞉problems.easy.041꞉> 
+clj꞉repl.11-macros꞉> 
+clojure.lang.PersistentList
+clj꞉repl.11-macros꞉> 
+(if :foo :bar (clojure.core/cond))
+clj꞉repl.11-macros꞉> 
+nil
+clj꞉repl.11-macros꞉> 
+(defmacro when
+  "Evaluates test. If logical true, evaluates body in an implicit do."
+  {:added "1.0"}
+  [test & body]
+  (list 'if test (cons 'do body)))
+nil
+clj꞉repl.11-macros꞉> 
+(if false (do (println 42)))
+clj꞉repl.11-macros꞉> 
+#'repl.11-macros/if-not3
+clj꞉repl.11-macros꞉> 
+(do (clojure.core/defn foo ([&form &env])) (. #'foo (setMacro)) #'foo)
+clj꞉repl.11-macros꞉> 
+(if (clojure.core/not 1) (+ 1 1) 3)
+clj꞉repl.11-macros꞉> 
+3
+nil
+clj꞉repl.11-macros꞉> 
+2
+clj꞉repl.11-macros꞉> 
+#'user/calc
+clj꞉user꞉> 
+; IllegalArgumentException clojure.core/let requires a vector for its binding in user:  clojure.core/let (core.clj:4333)
+clj꞉user꞉> 
+#'user/calc
+clj꞉user꞉> 
+; IllegalArgumentException clojure.core/let requires a vector for its binding in user:  clojure.core/let (core.clj:4333)
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+; CompilerException java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "current_state" is null, compiling:(form-init10818325770618001840.clj:12:9) 
+clj꞉user꞉> 
+; CompilerException java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke(Object)" because "current_state" is null, compiling:(form-init10818325770618001840.clj:15:9) 
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:158)
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:158)
+clj꞉user꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:158)
+clj꞉user꞉> 
+; IndexOutOfBoundsException   clojure.lang.PersistentVector.arrayFor (PersistentVector.java:158)
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:63869 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+{:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x538aea84 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x4a0ea975 "Unbound: #'user/z1"]}}
+#object[clojure.lang.Var$Unbound 0x538aea84 "Unbound: #'user/z0"]
+nil
+nil
+nil
+nil
+:reject
+clj꞉user꞉> 
+; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Aborting jack-in. No project type selected.
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+{:acceptance :accept, :transitions {\0 {:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x538aea84 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x4a0ea975 "Unbound: #'user/z1"]}}, \1 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x39a402b3 "Unbound: #'user/z2"], \1 #object[clojure.lang.Var$Unbound 0x5f15e7dd "Unbound: #'user/z3"]}}}}
+{:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x538aea84 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x4a0ea975 "Unbound: #'user/z1"]}}
+#object[clojure.lang.Var$Unbound 0x4a0ea975 "Unbound: #'user/z1"]
+nil
+nil
+nil
+:reject
+clj꞉user꞉> 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:63928 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+:accept
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+:reject
+clj꞉user꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:51896 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: z1 in this context, compiling:(c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-4clj\src\exercises\e7.clj:14:9) 
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-match
+clj꞉user꞉> 
+QUIT
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+(\1 \0 \1)
+clj꞉user꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: transition-state in this context, compiling:(c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-4clj\src\exercises\e7.clj:18:5) 
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/dfa-match2
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+{\0 #object[clojure.lang.Var$Unbound 0x1448c9ad "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x55454387 "Unbound: #'user/z1"]}
+nil
+clj꞉user꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:52128 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+{\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}
+nil
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+{\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}
+nil
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+nil
+nil
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+; ArityException Wrong number of args (0) passed to: PersistentArrayMap  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+{:accept {\0 {:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}}, \1 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x65993013 "Unbound: #'user/z2"], \1 #object[clojure.lang.Var$Unbound 0x626b2b35 "Unbound: #'user/z3"]}}}}
+nil
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/transition-state
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+; CompilerException java.lang.RuntimeException: Unable to resolve symbol: dfa-match2 in this context, compiling:(c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-4clj\src\exercises\e7.clj:31:1) 
+clj꞉user꞉> 
+{:accept {\0 {:accept {\0 {:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}}, \1 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x65993013 "Unbound: #'user/z2"], \1 #object[clojure.lang.Var$Unbound 0x626b2b35 "Unbound: #'user/z3"]}}}}, \1 {:reject {\0 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x44bbbcff "Unbound: #'user/z4"], \1 {:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}}}}, \1 {:acceptance :reject, :transitions {\0 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x65993013 "Unbound: #'user/z2"], \1 #object[clojure.lang.Var$Unbound 0x626b2b35 "Unbound: #'user/z3"]}}, \1 {:acceptance :reject, :transitions {\0 #object[clojure.lang.Var$Unbound 0x44bbbcff "Unbound: #'user/z4"], \1 {:acceptance :accept, :transitions {\0 #object[clojure.lang.Var$Unbound 0x47f7b4b0 "Unbound: #'user/z0"], \1 #object[clojure.lang.Var$Unbound 0x52348a89 "Unbound: #'user/z1"]}}}}}}}}}}
+nil
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; nREPL connection failed: Error: read ECONNRESET
+; Failed connecting.
+; nREPL Connection was closed
+; Starting Jack-in Terminal: pushd c:\Users\resul\OneDrive\Desktop\all\hhu-functional_programming-clojure\impl-repl & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:52286 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉user꞉> 
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+#'user/dfa-transition
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#object[clojure.lang.Var$Unbound 0x767d6a1c "Unbound: #'user/z1"]
+clj꞉user꞉> 
+#object[clojure.lang.Var$Unbound 0x216df29d "Unbound: #'user/z0"]
+clj꞉user꞉> 
+; ArityException Wrong number of args (3) passed to: user/dfa-transition  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉user꞉> 
+#object[clojure.lang.Var$Unbound 0x216df29d "Unbound: #'user/z0"]
+clj꞉user꞉> 
+{:status
+ {:status :accept,
+  :transitions
+  {\0 #object[clojure.lang.Var$Unbound 0x216df29d "Unbound: #'user/z0"],
+   \1 #object[clojure.lang.Var$Unbound 0x767d6a1c "Unbound: #'user/z1"]}},
+ :transitions \0}
+clj꞉user꞉> 
+; ArityException Wrong number of args (1) passed to: user/dfa-state  clojure.lang.AFn.throwArity (AFn.java:429)
+clj꞉user꞉> 
+{:status
+ {:status :accept,
+  :transitions
+  {\0 #object[clojure.lang.Var$Unbound 0x216df29d "Unbound: #'user/z0"],
+   \1 #object[clojure.lang.Var$Unbound 0x767d6a1c "Unbound: #'user/z1"]}},
+ :transitions
+ {:status :reject,
+  :transitions
+  {\0 #object[clojure.lang.Var$Unbound 0x29cee027 "Unbound: #'user/z2"],
+   \1 #object[clojure.lang.Var$Unbound 0x11ad56e5 "Unbound: #'user/z3"]}}}
+clj꞉user꞉> 
+#'user/dfa-transition
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+nil
+clj꞉user꞉> 
+#object[clojure.lang.Var$Unbound 0x216df29d "Unbound: #'user/z0"]
+clj꞉user꞉> 
+#'user/dfa-state
+clj꞉user꞉> 
+#'user/z0
+clj꞉user꞉> 
+#'user/z1
+clj꞉user꞉> 
+#'user/z2
+clj꞉user꞉> 
+#'user/z3
+clj꞉user꞉> 
+#'user/z4
+clj꞉user꞉> 
+; ClassCastException class user$z0 cannot be cast to class clojure.lang.IAtom (user$z0 is in unnamed module of loader clojure.lang.DynamicClassLoader @417b9fff; clojure.lang.IAtom is in unnamed module of loader 'app')  clojure.core/reset! (core.clj:2273)
+clj꞉user꞉> 

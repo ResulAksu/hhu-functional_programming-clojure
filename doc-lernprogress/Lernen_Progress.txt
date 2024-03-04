@@ -8,11 +8,13 @@ Plan: Durch Reading Guides arbeiten Stück für Stück
 4: [x]
 5: [x]
 6: [x]
-7: []
-8: []
+7: [x]
+8: [x]
 9: []
 10: []
 11: []
 12: []
 13: []
 14: []
+
+Am Ende Learning Outcomes als Goals nehmen

@@ -1,0 +1,52 @@
+7.
+(x) 17_homoiconicity.clj
+(x) 11_macros.clj
+(x) Video: Macros
+() Exercise 7 
+
+-Video:
+    -Macros: homoiconicity: Code wird Datenstrukturen in der Sprache selbst dargestellt.
+    "Data is Code, Code is Data"
+    -"when ... x" is macro für "if ... (do x)"
+    - (defmacro macroname)
+        - (defmacro when
+            {:added "1.0"}
+            [test & body]
+            (list 'if test (const 'do body)))
+-17_homoiconicity:
+    -;; Precondition
+    (defn myfunction-please-provide-int [x]
+        {:pre [(integer? x)]}
+        (println "value ok:" x))
+
+    (myfunction-please-provide-int 4)
+    (myfunction-please-provide-int "foo")
+-11_macros:
+
+-Exercises
+
+8.
+(x) 28_macros.clj
+(x) Video: Reader Macro
+() Exercise 7
+
+-Video:
+    -Readermacros: quote ist Readermacro direkt im Reader implementiert
+        - quote: Verhindert das auswerten 
+        - syntaxquote: ` Symbol wird aufgelöst und bekommt namespace
+            Expansionsschritt vom normalen quote, welcher die Datenstruktur erzeugt
+        - ~ unquote, alle Regeln werden vom syntaxquote aufgehoben
+            bsp: '´(+ 1 ~(* 2 3))
+            => (clj.core/seq 
+                (clj.core/concat
+                 (clj.core/list (quote clj.core/+))
+                 (clj.core/list 1)
+                 (clj.core/list (* 2 3))))
+        - ~@ unquote-splice, wie unquote aber liste wird entfernt
+            bsp: '´(+ 1 ~(* 2 3))
+            => (clj.core/seq 
+                (clj.core/concat
+                 (clj.core/list (quote clj.core/+))
+                 (clj.core/list 1)
+                  (* 2 3)))
+        - `x# Gensymbol wird benutzt und in einem Scope wiederverwendet, bei verschachtelung neue
