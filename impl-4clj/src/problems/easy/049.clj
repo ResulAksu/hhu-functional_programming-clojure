@@ -8,7 +8,7 @@ split a sequence into two parts.")
 
 
 (defn solution
-  [& args])
+  [in coll] (split-at in coll))
 
 
 (assert (and (= (solution 3 [1 2 3 4 5 6]) [[1 2 3] [4 5 6]])
