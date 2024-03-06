@@ -1,4 +1,39 @@
-() 24_atoms.clj, 25_agents.clj
-() Videos: Atoms, Agents
+(x) 24_atoms.clj, 25_agents.clj
+(x) Videos: Atoms, Agents
 () Exercise 10
 
+-Videos:
+    -Atoms:
+        (atom v) anlegen und init
+        (@a) bzw. (deref a) deref
+        (reset! a v) zurücksetzen
+        (swap! a f args) verändern (HOF)
+
+        (defn get-beer [m] 
+        (-> m 
+            (update :beer dec)
+            (update :profit +3)))
+        (swap! state get-beer)
+
+        unkoordiniert: nur ein Atom benutzen
+        @, deref, swap! maximal 1 aufrufen
+    -Agent:
+        (agent v)
+        (@agent) bzw. (deref agent)
+        (send agent f args) bzw. (send-off agent f args) ändern
+        (restart-agent agent v) zurücksetzen
+        (await agent) wartet auf die Vollendung aller Aufgaben des Agenten->asynchron
+
+        send,send-off geben Agenten zurück
+        send: gibt Fkt an einen Threadpool
+        send-off: gibt Fkt an einen neuen Thread
+        
+-24_atoms.clj:
+    CAS: 
+    1. The old value is read
+    2. The new value is calculated
+    3. Check: is the current value still the same as the old?
+        a) if so: store the new value in the atom (atomic operation, thread-safe)
+        b) otherwise: return to step 1.
+
+-Exercise 10:
