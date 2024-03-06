@@ -1,0 +1,20 @@
+(x) Videos: Rich Hickey Concurrency, Epochal Time Modal
+
+-Videos: 
+    -Concurrency:
+        Clojure References:
+            Vars - isolate changes within threads
+            Refs - synchr. coordinated changes between threads
+            Agents - asynchr. independent changes between threads
+        Refs
+            Transactional Memory System
+            Can only changed within transaction
+            All Changes are atomic and isolated
+    -Epochal Time Modal
+        State von einer Identität ist ein Wert zu einem Zeitpunkt
+        State wird durch ein Process Event zu einem neuen State aber in der gleichen Identität
+        Observer können einen State abonnieren
+        __
+        Implementierung: 
+            -Synchron: Refs (koordiniert), Atoms (unkoordiniert)
+            -Asynchron: Agents (unkoordiniert)
