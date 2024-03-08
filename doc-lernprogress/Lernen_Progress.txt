@@ -17,6 +17,6 @@ Plan: Durch Reading Guides arbeiten Stück für Stück
 13: [skip]
 14: [skip]
 
-Next: Learning Outcomes in ein Dokument in eigenen Worten []
+Next: Learning Outcomes schriftlich in eigenen Worten []
 Next: 4Clojure Aufgaben []
 Next: Altklausuren/Probleklausur []
