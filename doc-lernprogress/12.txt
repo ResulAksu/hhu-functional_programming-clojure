@@ -1,0 +1,40 @@
+(x) Videos: Refs
+(x) 26_refs.clj, 27_future_promise.clj
+
+-Videos:
+    Refs:
+        (ref v) anlegen und init
+        @r bzw. (deref ref)
+        (dosync ...) in Transaktionen verändern
+            -können nur in dosync block:
+            (ref-set ref v) zurücksetzen 
+            (alter ref f arg1 ...) verändern
+        new:
+        (ensure ref) Aufnehmen in Konfliktmenge der gel. Refs
+        (commute ref) geschriebene Refs daraus zu entfernen
+
+        -refs sind für transaktionen sehr gut (-> dosync)
+        -langsamer als Atom durch Konfliktmenge
+        -nur geschriebene Refs sind in der Konfliktmenge nicht gelesene
+         -> (dosync (alter b + @a)) -> hier a nicht
+        -gelesene durch (dosync (alter b + (ensure @a))). 
+
+        => sinnvoll für viele kleine, getrennte Zustandsänderung
+        => atom verwenden wenn ref nicht nützlich ist.
+
+-26_refs.clj:
+  refs are synchronous and coordinated.
+  - synchronous: calls return to us, once the operation was completed.
+  - coordinated: we may finally use (read from / write to) several refs at the same time!
+
+-27_future_promise:
+    -future is a Container for concurrently performed calc 
+    -check if finished with realized?
+        -   (time
+                (let [result (future (do (Thread/sleep 1000) 23))]
+                (println "Check1:" (realized? result))
+                (Thread/sleep 1500)
+                (println "Check2:" (realized? result))))
+    
+
+

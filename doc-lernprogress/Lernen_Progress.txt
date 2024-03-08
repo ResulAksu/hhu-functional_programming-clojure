@@ -12,9 +12,11 @@ Plan: Durch Reading Guides arbeiten Stück für Stück
 8: [x]
 9: [x]
 10: [x]
-11: []
-12: []
-13: []
-14: []
+11: [skip]
+12: [x]
+13: [skip]
+14: [skip]
 
-Am Ende Learning Outcomes als Goals nehmen
+Next: Learning Outcomes in ein Dokument in eigenen Worten []
+Next: 4Clojure Aufgaben []
+Next: Altklausuren/Probleklausur []
