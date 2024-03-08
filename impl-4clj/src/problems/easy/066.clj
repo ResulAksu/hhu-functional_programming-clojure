@@ -8,7 +8,11 @@ returns the greatest common divisor.")
 
 
 (defn solution
-  [& args])
+  [int1 int2]
+  (if (zero? int1)
+    int2
+    (recur (mod int2 int1) int1)))
+
 
 
 (assert (and (= (solution 2 4) 2)

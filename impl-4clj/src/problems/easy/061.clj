@@ -8,8 +8,8 @@ and a vector of values and constructs a map from them.")
 
 
 (defn solution
-  [& args])
-
+  [keys values]
+  (zipmap keys values))
 
 (assert (and (= (solution [:a :b :c] [1 2 3]) {:a 1, :b 2, :c 3})
              (= (solution [1 2 3 4] ["one" "two" "three"]) {1 "one", 2 "two", 3 "three"})

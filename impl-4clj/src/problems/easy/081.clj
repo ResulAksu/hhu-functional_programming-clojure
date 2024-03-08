@@ -10,7 +10,8 @@ that each set has in common.")
 
 
 (defn solution
-  [& args])
+  [set1 set2]
+  (set(filter identity(map set1 set2))))
 
 
 (assert (and (= (solution #{0 1 3 2} #{4 3 2 5}) #{3 2})
